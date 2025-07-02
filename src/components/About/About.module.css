@@ -1,0 +1,128 @@
+.aboutContainer {
+  min-height: 620px;
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  padding: 40px 70px;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  width: 100%;
+  max-width: 1300px;
+}
+
+.about h2 {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: var(--primary-green);
+  position: relative;
+}
+
+.about h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 70%;
+  height: 6px;
+  background-color: var(--secondary-3);
+}
+
+.aboutContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  width: 100%;
+}
+
+.textContent h3 {
+  font-family: "Markazi Text", serif;
+  font-size: 4rem;
+  font-weight: 500;
+  color: var(--secondary-3);
+}
+
+.textContent p:first-of-type {
+  font-family: "Markazi Text", serif;
+  font-size: 2.5rem;
+  color: var(--primary-green);
+}
+
+.textContent p:last-of-type {
+  color: var(--primary-green);
+  line-height: 1.5;
+  max-width: 390px;
+  margin-top: 16px;
+}
+
+.imgContainer {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+  min-height: 400px;
+}
+
+.imgContainer img {
+  position: absolute;
+  width: 55%;
+  height: 75%;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  object-fit: cover;
+}
+
+.imgContainer img:first-of-type {
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.imgContainer img:last-of-type {
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+
+@media screen and (max-width: 992px) {
+  .about {
+    padding: 40px 0;
+  }
+
+  .aboutContent {
+    gap: 30px;
+  }
+
+  .textContent h3 {
+    font-size: 3rem;
+  }
+
+  .textContent p:first-of-type {
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .aboutContent {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .imgContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .imgContainer img {
+    position: static;
+    width: 100%;
+  }
+}

@@ -1,0 +1,148 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 70px;
+  height: 80px;
+}
+
+nav {
+  width: 100%;
+  height: 100%;
+  max-width: 1300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.navItems {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  align-items: center;
+}
+
+.navItems li {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--secondary-4);
+  transition: all 300ms;
+  position: relative;
+}
+
+.navItems li::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-yellow);
+}
+
+.navItems li:hover::after {
+  width: 80%;
+}
+
+.navItems li:hover {
+  color: var(--primary-yellow);
+}
+
+.subnav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.subnav img {
+  width: 32px;
+  object-fit: cover;
+}
+
+.subnav a:last-child {
+  display: inline-block;
+  padding: 16px 40px;
+  background-color: var(--primary-yellow);
+  color: var(--secondary-4);
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  transition: all 300ms;
+}
+
+.subnav a:last-child:hover {
+  background-color: var(--secondary-4);
+  color: var(--secondary-2);
+  transform: scale(1.05);
+}
+
+.toggleButton {
+  display: none;
+  cursor: pointer;
+}
+
+.dropdownMenu {
+  display: none;
+  position: absolute;
+  width: 200px;
+  top: 100%;
+  right: 0;
+  background-color: var(--secondary-4);
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.dropdownMenu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  color: var(--secondary-2);
+  font-size: 1.125rem;
+  font-weight: 500;
+  transition: all 300ms;
+  cursor: pointer;
+}
+
+.dropdownMenu li:hover {
+  color: var(--secondary-4);
+  background-color: var(--primary-yellow);
+}
+
+@media screen and (max-width: 992px) {
+  header {
+    padding: 0 40px;
+  }
+
+  .navItems {
+    gap: 20px;
+    font-size: 1rem;
+  }
+
+  .subnav {
+    gap: 20px;
+  }
+
+  .subnav a:last-child {
+    padding: 16px 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navItems,
+  .subnav {
+    display: none;
+  }
+
+  .toggleButton {
+    display: block;
+  }
+
+  .dropdownMenu {
+    display: block;
+  }
+}
