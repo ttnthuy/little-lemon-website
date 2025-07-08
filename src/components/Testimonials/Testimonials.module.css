@@ -1,4 +1,4 @@
-.testimonialsContainer {
+.testimonialsSection {
   display: flex;
   justify-content: center;
   background-color: var(--secondary-2);
@@ -99,4 +99,16 @@ q {
   line-clamp: 3;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+}
+
+@media screen and (max-width: 992px) {
+  .testimonialsSection {
+    padding: 40px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .testimonialsSection {
+    padding: 40px 20px;
+  }
 }

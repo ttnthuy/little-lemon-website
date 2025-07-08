@@ -1,0 +1,43 @@
+.successCard {
+  max-width: 400px;
+  margin: 30px auto;
+  border: 2px solid var(--primary-green);
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  min-height: 440px;
+}
+
+.successHeading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-green);
+}
+
+.successMessage {
+  font-size: 1rem;
+  color: var(--secondary-4);
+  line-height: 1.5;
+}
+
+.closeButton {
+  font-size: 1rem;
+  background-color: var(--primary-yellow);
+  color: var(--secondary-4);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 40px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 300ms;
+}
+
+.closeButton:hover {
+  background-color: var(--secondary-4);
+  color: var(--secondary-2);
+}

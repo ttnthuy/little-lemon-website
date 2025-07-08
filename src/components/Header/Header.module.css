@@ -128,7 +128,7 @@ nav {
   }
 
   .subnav a:last-child {
-    padding: 16px 20px;
+    padding: 10px 20px;
   }
 }
 
@@ -144,5 +144,11 @@ nav {
 
   .dropdownMenu {
     display: block;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  header {
+    padding: 0 20px;
   }
 }

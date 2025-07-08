@@ -43,7 +43,7 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 20px 40px;
+  padding: 16px 40px;
   font-weight: 700;
   background-color: var(--primary-yellow);
   color: var(--secondary-4);
@@ -63,12 +63,12 @@
 }
 
 @media screen and (max-width: 576px) {
+  .specialsSection {
+    padding: 40px 20px;
+  }
+
   .specialsHeader {
     flex-direction: column;
     gap: 40px;
-  }
-
-  .specialsHeader a {
-    padding: 10px 20px;
   }
 }

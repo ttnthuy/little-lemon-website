@@ -5,7 +5,7 @@ import star from "../../assets/images/star.png";
 
 const Testimonials = () => {
   return (
-    <section className={styles.testimonialsContainer}>
+    <section className={styles.testimonialsSection}>
       <div className={styles.testimonials}>
         <h2>Testimonials</h2>
 

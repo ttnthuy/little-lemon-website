@@ -1,0 +1,49 @@
+.formSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.formSection form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  width: 100%;
+  max-width: 400px;
+}
+
+fieldset {
+  all: unset;
+  width: 100%;
+}
+
+legend {
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--primary-green);
+}
+
+.formControlBtns {
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.formControlBtns button {
+  font-size: 1rem;
+  padding: 10px 40px;
+  color: var(--secondary-4);
+  background-color: var(--primary-yellow);
+  border-radius: 8px;
+  font-weight: 700;
+  transition: all 300ms;
+}
+
+.formControlBtns button:hover {
+  color: var(--secondary-2);
+  background-color: var(--secondary-4);
+}
