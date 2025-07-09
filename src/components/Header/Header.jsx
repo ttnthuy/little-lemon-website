@@ -30,22 +30,31 @@ const Header = () => {
         </ul>
 
         <div className={styles.subnav}>
-          <Link to="/cart">
+          <Link to="/cart" aria-label="View shopping cart">
             <img src={cart} alt="open cart" />
           </Link>
-          <a href="/">Login</a>
+          <a href="/" aria-label="Login to your account">
+            Login
+          </a>
         </div>
 
-        <button className={styles.toggleButton} onClick={handleToggleButton}>
-          {isOpen ? (
-            <FontAwesomeIcon icon={faClose} size="2x" />
-          ) : (
-            <FontAwesomeIcon icon={faBars} size="2x" />
-          )}
+        <button
+          className={styles.toggleButton}
+          onClick={handleToggleButton}
+          aria-expanded={isOpen}
+          aria-controls="mobile-menu"
+          aria-label={isOpen ? "Close mobile menu" : "Open mobile menu"}
+        >
+          <FontAwesomeIcon icon={isOpen ? faClose : faBars} size="2x" />
         </button>
 
         {isOpen && (
-          <ul className={styles.dropdownMenu}>
+          <ul
+            className={styles.dropdownMenu}
+            id="mobile-menu"
+            role="menu"
+            aria-label="Mobile navigation menu"
+          >
             {mobileNav.map((navItem) => (
               <li key={navItem.id} onClick={handleToggleButton}>
                 <NavLink to={navItem.href}>{navItem.name}</NavLink>

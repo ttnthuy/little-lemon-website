@@ -5,7 +5,7 @@ const ProductCard = ({ product }) => {
   return (
     <article className={styles.productCard}>
       <div className={styles.productImg}>
-        <img src={product.image} alt="" />
+        <img src={product.image} alt={product.title} />
       </div>
       <div className={styles.productContent}>
         <div className={styles.productInfo}>
@@ -14,7 +14,7 @@ const ProductCard = ({ product }) => {
         </div>
         <p className={styles.productDesc}>{product.description}</p>
         <div className={styles.productBtns}>
-          <button>
+          <button aria-label={`Add ${product.title} to cart`}>
             <img
               src={basket}
               alt=""
@@ -24,7 +24,7 @@ const ProductCard = ({ product }) => {
             />
             <span>Add to cart</span>
           </button>
-          <button>Buy now</button>
+          <button aria-label={`Buy ${product.title} now`}>Buy now</button>
         </div>
       </div>
     </article>

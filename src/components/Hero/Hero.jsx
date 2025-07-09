@@ -15,13 +15,13 @@ const Hero = () => {
             At Little Lemon, we serve fresh, flavorful dishes.
           </p>
           <div className={styles.heroLinks}>
-            <Link to="/reservations">Reserve a table</Link>
-            <Link href="/order">Order online</Link>
+            <Link to="/reservations" aria-label="Reserve a table at Little Lemon">Reserve a table</Link>
+            <Link href="/order" aria-label="Order food online from Little Lemon">Order online</Link>
           </div>
         </div>
 
         <div className={styles.heroImgContainer}>
-          <img src={heroImage} alt="hero" />
+          <img src={heroImage} alt="A fresh Mediterranean dish served at Little Lemon" />
         </div>
       </div>
     </section>
