@@ -1,9 +1,9 @@
-import React, { useEffect, useReducer } from "react";
+import React, { useReducer } from "react";
 import { fetchAPI } from "../../utilities/mockApi";
 import FormField from "../FormField/FormField";
 
 // --- Reducer ---
-function updateTimes(state, action) {
+export function updateTimes(state, action) {
   if (action.type === "change_date") {
     const parsedDate =
       typeof action.payload === "string"
@@ -14,14 +14,8 @@ function updateTimes(state, action) {
   throw Error("Unknown action.");
 }
 
-const BookingDetails = ({ values }) => {
+const BookingDetails = ({ values, setFieldValue }) => {
   const [availableTimes, dispatch] = useReducer(updateTimes, []);
-
-  useEffect(() => {
-    if (values.date) {
-      dispatch({ type: "change_date", payload: values.date });
-    }
-  }, [values.date]);
 
   return (
     <fieldset>
@@ -33,6 +27,11 @@ const BookingDetails = ({ values }) => {
         type="date"
         id="date"
         min={new Date().toISOString().split("T")[0]}
+        onChange={(e) => {
+          const value = e.target.value;
+          setFieldValue("date", value);
+          dispatch({ type: "change_date", payload: e.target.value });
+        }}
       />
 
       <FormField label="Time" name="time" id="time" as="select">
